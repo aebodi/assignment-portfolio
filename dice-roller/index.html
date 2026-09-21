@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--
+	AI use: Claude (Opus 5) drafted this markup — the instructions panel, the five labelled
+	die cards, the summary fields, and the Roll button; reviewed and edited by hand.
+-->
+<html lang='en'>
+<head>
+	<meta charset='UTF-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<title>Yahtzee Dice Roller</title>
+	<link rel='stylesheet' href='styles.css'>
+</head>
+<body onload='startApp()'>
+	<main class='app'>
+		<header class='app__header'>
+			<h1>Yahtzee Dice Roller</h1>
+			<p class='tagline'>Five six-sided dice, rolled fairly, every time.</p>
+		</header>
+
+		<section class='instructions' aria-labelledby='how-to'>
+			<h2 id='how-to'>How to Use</h2>
+			<p>
+				Yahtzee is played with five 6-sided dice. This application rolls all five
+				dice for you and reports the result, so you can play without hunting for
+				physical dice.
+			</p>
+			<ol>
+				<li>The dice roll automatically when the page loads.</li>
+				<li>
+					Press <kbd>Enter</kbd> or click <strong>Roll Dice</strong> to throw all
+					five dice again.
+				</li>
+				<li>
+					Watch them tumble, then read each value below its heading; the totals
+					update on every roll.
+				</li>
+			</ol>
+			<p class='note'>
+				All result fields are read only &mdash; they are filled in by the program using
+				randomly generated numbers between 1 and 6.
+			</p>
+		</section>
+
+		<section class='dice' aria-labelledby='results'>
+			<h2 id='results'>Roll Results</h2>
+
+			<div class='stage' id='stage' hidden></div>
+
+			<div class='dice__row' id='diceRow'>
+				<div class='die-card'>
+					<label class='die-card__label' for='die1'>Die 1</label>
+					<div class='die-face' id='face1' aria-hidden='true'></div>
+					<input class='die-card__value' type='text' id='die1' name='die1' value='' readonly>
+				</div>
+				<div class='die-card'>
+					<label class='die-card__label' for='die2'>Die 2</label>
+					<div class='die-face' id='face2' aria-hidden='true'></div>
+					<input class='die-card__value' type='text' id='die2' name='die2' value='' readonly>
+				</div>
+				<div class='die-card'>
+					<label class='die-card__label' for='die3'>Die 3</label>
+					<div class='die-face' id='face3' aria-hidden='true'></div>
+					<input class='die-card__value' type='text' id='die3' name='die3' value='' readonly>
+				</div>
+				<div class='die-card'>
+					<label class='die-card__label' for='die4'>Die 4</label>
+					<div class='die-face' id='face4' aria-hidden='true'></div>
+					<input class='die-card__value' type='text' id='die4' name='die4' value='' readonly>
+				</div>
+				<div class='die-card'>
+					<label class='die-card__label' for='die5'>Die 5</label>
+					<div class='die-face' id='face5' aria-hidden='true'></div>
+					<input class='die-card__value' type='text' id='die5' name='die5' value='' readonly>
+				</div>
+			</div>
+
+			<div class='summary'>
+				<div class='summary__item'>
+					<label for='total'>Total of Dice</label>
+					<input type='text' id='total' name='total' value='' readonly>
+				</div>
+				<div class='summary__item'>
+					<label for='highest'>Highest Die</label>
+					<input type='text' id='highest' name='highest' value='' readonly>
+				</div>
+				<div class='summary__item'>
+					<label for='rollCount'>Rolls This Session</label>
+					<input type='text' id='rollCount' name='rollCount' value='' readonly>
+				</div>
+			</div>
+
+			<p class='callout' id='callout' role='status'>&nbsp;</p>
+
+			<div class='actions'>
+				<button type='button' id='rollButton' class='btn' autofocus onclick='rollDice()'>
+					Roll Dice
+				</button>
+			</div>
+		</section>
+
+		<footer class='app__footer'>
+			<p>Random values produced with JavaScript’s <code>Math.random()</code>.</p>
+		</footer>
+	</main>
+
+	<script src='script.js'></script>
+	<!-- The 3D tray is a progressive enhancement: if this module cannot load,
+			 script.js keeps working with the flat CSS dice. -->
+	<script type='module' src='dice3d.js' onerror='fallbackTo2D()'></script>
+</body>
+</html>

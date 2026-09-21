@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<!--
+	AI use: Claude (Opus 5) generated the initial HTML structure and section markup from the
+	content of my existing PDF resume. All resume content is my own; headings, wording, and
+	link targets were reviewed and corrected by hand.
+-->
+<html lang='en'>
+
+<head>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<title>Andres Bodington &mdash; Resume</title>
+	<meta name='description'
+		content='Web resume of Andres Bodington, Computer Science student at Lewis University.'>
+	<link rel='stylesheet' href='index.css'>
+</head>
+
+<body>
+
+	<!-- Screen-only toolbar. Hidden when the page is printed. -->
+	<nav class='toolbar' aria-label='Resume actions'>
+		<span class='toolbar-title'>Lewis University Resume Review</span>
+		<div class='toolbar-actions'>
+			<a class='button' href='andres-bodington-resume.pdf' download>Download PDF</a>
+			<a class='button button-secondary' href='andres-bodington-resume.pdf' target='_blank'
+				rel='noopener'>View PDF</a>
+		</div>
+	</nav>
+
+	<main class='resume' id='resume'>
+
+		<header class='resume-header'>
+			<h1>Andres Bodington</h1>
+			<p class='contact'>
+				<a href='tel:+18283191177'>(828) 319-1177</a>
+				<span class='divider' aria-hidden='true'>|</span>
+				<a href='mailto:aebodington27@gmail.com'>aebodington27@gmail.com</a>
+				<span class='divider' aria-hidden='true'>|</span>
+				<span>Chicago, IL</span>
+				<span class='divider' aria-hidden='true'>|</span>
+				<a href='https://www.linkedin.com/in/andresbodington' target='_blank'
+					rel='noopener'>LinkedIn</a>
+				<span class='divider' aria-hidden='true'>|</span>
+				<a href='https://github.com/aebodi' target='_blank' rel='noopener'>GitHub</a>
+			</p>
+		</header>
+
+		<section class='resume-section'>
+			<h2>Highlights of Qualifications</h2>
+			<ul>
+				<li>
+					High-achieving Computer Science student (GPA 4.0/4.0) with a strong foundation in
+					backend development, object-oriented programming, and database design
+				</li>
+				<li>
+					Software Engineering Intern at Andr&oacute;meda Ventures, cutting LLM API costs on
+					production chatbots via real-time rate limiting, WebSocket cost tracking, and prompt
+					optimization
+				</li>
+				<li>
+					Proficient in Java, C++, Python, and TypeScript, with proven experience designing a
+					multi-tenant REST API (AquaAnalytics) that automated data ingestion and managed
+					10,000+ race results
+				</li>
+				<li>
+					Demonstrated discipline, leadership, and teamwork as a Second Team Scholar
+					All-America swimmer and active member of the AI/Data Science and Cybersecurity clubs
+				</li>
+				<li>
+					Bilingual in Spanish and English; semi-fluent in Portuguese, with strong
+					cross-cultural communication skills
+				</li>
+			</ul>
+		</section>
+
+		<section class='resume-section'>
+			<h2>Summary of Technical Qualifications</h2>
+			<dl class='skills'>
+				<dt>Operating Systems</dt>
+				<dd>Windows, Linux, macOS, VMware</dd>
+
+				<dt>Networking</dt>
+				<dd>LAN, WAN, Cloud, and Wireless system design, configuration, and troubleshooting</dd>
+
+				<dt>Programming Languages</dt>
+				<dd>C++, Java, Python, TypeScript, SQL, JavaScript</dd>
+
+				<dt>Frameworks &amp; Web Technologies</dt>
+				<dd>NestJS, Spring Boot, LangChain, REST APIs, WebSockets, HTML5, CSS3, JSON</dd>
+
+				<dt>Databases</dt>
+				<dd>PostgreSQL, SQL</dd>
+
+				<dt>Development Management Tools</dt>
+				<dd>Git, GitHub, unit testing</dd>
+
+				<dt>Content Creation Tools</dt>
+				<dd>Adobe Photoshop, Adobe Illustrator, Microsoft Office</dd>
+
+				<dt>Skills</dt>
+				<dd>
+					Backend development, object-oriented programming (OOP), data structures and
+					algorithms, database design, software engineering, AI and machine learning, AI agent
+					orchestration, LLM cost optimization
+				</dd>
+			</dl>
+		</section>
+
+		<section class='resume-section'>
+			<h2>Experience</h2>
+			<article class='entry'>
+				<div class='entry-head'>
+					<h3><strong>Andr&oacute;meda Ventures</strong> &mdash; Software Engineering Intern</h3>
+					<span class='entry-date'>June 2026 &ndash; August 2026</span>
+				</div>
+				<ul>
+					<li>
+						Optimized the AI backend powering the Mandarina Tec and Tribu Deportiva production
+						chatbots, cutting LLM API spend with no loss in response quality or added latency
+					</li>
+					<li>
+						Built a real-time rate limiter enforcing a $0.10 hard cap per user, with automated
+						alerts at 80% of budget
+					</li>
+					<li>
+						Migrated the OpenRouter integration to WebSockets, enabling zero-latency, real-time
+						spend tracking per request
+					</li>
+					<li>
+						Researched prompt structure and API configuration to lower token usage per
+						conversation while preserving answer accuracy
+					</li>
+					<li>
+						Developed custom LLM tools, including a soccer player comparison tool for Tribu
+						Deportiva, delivering structured answers beyond generic chatbot replies
+					</li>
+					<li>
+						Evaluated AI agent frameworks and implemented a LangChain-based architecture that
+						reduced hallucinations by over 70%
+					</li>
+					<li>
+						Refactored nested logic into the Repository Pattern with custom NestJS wrappers,
+						centralizing error handling with full unit-test coverage
+					</li>
+				</ul>
+			</article>
+		</section>
+
+		<section class='resume-section'>
+			<h2>Project</h2>
+			<article class='entry'>
+				<div class='entry-head'>
+					<h3>
+						<strong>AquaAnalytics</strong> &ndash; Swim Performance Analytics REST API
+						<span class='entry-meta'>(Java, Spring Boot, PostgreSQL)</span>
+					</h3>
+				</div>
+				<ul>
+					<li>
+						Built a multi-tenant REST API enabling swim coaches to track athlete performance,
+						analyze race data, and calculate improvement metrics across 50+ swimmers and
+						200+ events
+					</li>
+					<li>
+						Automated meet results ingestion by parsing PDFs with Apache PDFBox, reducing
+						manual data entry time by 90% while maintaining accuracy through name matching
+					</li>
+					<li>
+						Implemented advanced analytics endpoints calculating improvement rates, fatigue
+						indicators, and split consistency scores using statistical algorithms on
+						10,000+ race results
+					</li>
+				</ul>
+			</article>
+		</section>
+
+		<section class='resume-section'>
+			<h2>Education</h2>
+			<article class='entry'>
+				<div class='entry-head'>
+					<h3><strong>Lewis University</strong>, Romeoville, IL</h3>
+					<span class='entry-date'>August 2025 &ndash; Present</span>
+				</div>
+				<p class='entry-detail'>Bachelor of Science in Computer Science, GPA: 4.0/4.0</p>
+			</article>
+			<article class='entry'>
+				<div class='entry-head'>
+					<h3><strong>Mars Hill University</strong>, Mars Hill, NC</h3>
+					<span class='entry-date'>August 2023 &ndash; May 2025</span>
+				</div>
+				<p class='entry-detail'>Bachelor of Science in Computer Science, GPA: 3.96/4.0</p>
+				<p class='entry-detail'>Dean&rsquo;s List (Fall 2023, Spring 2024, Fall 2024, Spring 2025)</p>
+			</article>
+		</section>
+
+		<section class='resume-section'>
+			<h2>Honors and Awards</h2>
+			<ul>
+				<li>
+					Recipient, Merit Transfer Scholarship for academic achievement, 2025&ndash;Present;
+					Scholastic All-America 2024
+				</li>
+				<li>Second Team Scholar All-America 2025</li>
+				<li>
+					Eight-time conference finalist and Mars Hill University school record holder
+					(500, 1000, 1650 Freestyle)
+				</li>
+			</ul>
+		</section>
+
+		<section class='resume-section'>
+			<h2>Leadership, Activities, and Volunteer Experience</h2>
+			<ul>
+				<li>
+					Member, Lewis University AI and Data Science Club and Cybersecurity Club
+					(August 2025 &ndash; Present)
+				</li>
+				<li>
+					Member, Mars Hill University Men&rsquo;s Swim Team (2023&ndash;2025); Lewis University
+					Men&rsquo;s Swim Team (2025&ndash;Present)
+				</li>
+				<li>
+					Red Cross Volunteer, Marshall, NC (September&ndash;October 2024): Assisted in
+					Hurricane Helene&rsquo;s recovery efforts
+				</li>
+			</ul>
+		</section>
+
+	</main>
+
+	<footer class='page-footer'>
+		<p>
+			Submitted for Lewis University resume review services.
+			<a href='andres-bodington-resume.pdf'>Printable PDF version</a>.
+		</p>
+	</footer>
+
+</body>
+
+</html>

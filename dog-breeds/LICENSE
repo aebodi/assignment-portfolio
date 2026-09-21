@@ -19,3 +19,19 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+CREDIT NOTICE
+
+This application is an implementation of the tutorial "Dogs, JavaScript & An API - Fetch,
+Promises & Async Await" by Brad Schiff (LearnWebCode),
+https://www.youtube.com/watch?v=AVmGmLFcukM. The application concept and the fetch /
+promise / async-await structure are his work, with full credit given.
+
+The tutorial is published as an instructional video and does not carry its own license
+file. The code in this repository was written by hand while following the tutorial and is
+released under the MIT terms above.
+
+Breed data and photographs are provided by the Dog CEO API (https://dog.ceo/dog-api/),
+which is free to use.

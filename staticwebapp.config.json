@@ -1,0 +1,23 @@
+{
+	"routes": [
+		{
+			"route": "/resume.pdf",
+			"redirect": "/web-resume/andres-bodington-resume.pdf",
+			"statusCode": 301
+		}
+	],
+	"navigationFallback": {
+		"rewrite": "/index.html",
+		"exclude": ["/dice-roller/*", "/dog-breeds/*", "/web-resume/*", "/*.css", "/*.js", "/*.pdf"]
+	},
+	"mimeTypes": {
+		".pdf": "application/pdf",
+		".css": "text/css",
+		".js": "text/javascript",
+		".html": "text/html",
+		".json": "application/json"
+	},
+	"globalHeaders": {
+		"Strict-Transport-Security": "max-age=31536000; includeSubDomains"
+	}
+}

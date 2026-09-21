@@ -1,0 +1,75 @@
+/*
+ * Dog Breed Slideshow
+ *
+ * AI use: Claude (Opus 5) wrote this stylesheet. It is plain layout only and does not follow
+ * the tutorial's styling; reviewed and edited by hand.
+ */
+
+body {
+	margin: 0;
+	padding: 2rem 1rem;
+	background: #f4f4f4;
+	color: #222;
+	font-family: system-ui, sans-serif;
+}
+
+.app {
+	max-width: 40rem;
+	margin: 0 auto;
+	text-align: center;
+}
+
+h1 {
+	margin-bottom: 0.25rem;
+}
+
+.intro {
+	margin-top: 0;
+	color: #555;
+}
+
+.picker {
+	margin: 1.5rem 0;
+}
+
+label {
+	margin-right: 0.5rem;
+	font-weight: bold;
+}
+
+select {
+	padding: 0.4rem;
+	font-size: 1rem;
+}
+
+/* Fixed height so the page does not jump as photos of different sizes load. */
+.viewer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 24rem;
+	background: #fff;
+	border: 1px solid #ccc;
+}
+
+#breedImage {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.status {
+	min-height: 1.5rem;
+	color: #555;
+}
+
+.controls button {
+	margin: 0 0.25rem;
+	padding: 0.5rem 1.25rem;
+	font-size: 1rem;
+	cursor: pointer;
+}
+
+.controls button:disabled {
+	cursor: default;
+	opacity: 0.5;
+}

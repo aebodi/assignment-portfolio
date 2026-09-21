@@ -1,13 +1,122 @@
 <!doctype html>
-<html>
+<html lang='en'>
 	<head>
-		<meta charset="utf-8" />
-		<link rel="stylesheet" href="index.css" />
-		<script defer src="index.js"></script>
-		<title>HWT</title>
+		<meta charset='utf-8' />
+		<meta name='viewport' content='width=device-width, initial-scale=1' />
+		<meta
+			name='description'
+			content='Portfolio hub for the web-based class assignments of Andres Bodington.'
+		/>
+		<link rel='stylesheet' href='index.css' />
+		<title>Andres Bodington — Assignment Portfolio</title>
 	</head>
 	<body>
-		<h1 id="msg">Hello, World!</h1>
-		<button onclick="makeGreen()">Make Green</button>
+		<header class='page-header'>
+			<p class='eyebrow'>Lewis University — Software Engineering</p>
+			<h1>Assignment Portfolio</h1>
+			<p class='byline'>Andres Bodington</p>
+			<p class='intro'>
+				Every web-based assignment for the course, hosted here and linked to its own
+				deployment and source repository.
+			</p>
+		</header>
+
+		<main>
+			<section aria-labelledby='completed-heading'>
+				<h2 id='completed-heading'>Completed assignments</h2>
+
+				<!--
+					TODO: replace each azurestaticapps.net placeholder below once the individual
+					assignment deployments have hostnames. The local copies under /dice-roller/,
+					/dog-breeds/, and /web-resume/ are served from this site and work regardless.
+				-->
+				<ul class='card-grid'>
+					<li class='card'>
+						<p class='sprint-label'>Sprint 2</p>
+						<h3>Yahtzee Dice Roller</h3>
+						<p class='card-body'>
+							Rolls five six-sided dice on a 3D felt tray, with a flat CSS fallback when
+							the physics libraries cannot be reached.
+						</p>
+						<ul class='link-row'>
+							<li><a class='link-primary' href='dice-roller/'>Open</a></li>
+							<li>
+								<a href='https://yellow-moss-04310bc10.5.azurestaticapps.net'>Live site</a>
+							</li>
+							<li><a href='https://github.com/aebodi/dice_roller_ai'>Source</a></li>
+						</ul>
+					</li>
+
+					<li class='card'>
+						<p class='sprint-label'>Sprint 2</p>
+						<h3>Dog Breed Slideshow</h3>
+						<p class='card-body'>
+							“Lions, Tigers, and Bears, Oh My!” — lists every breed from the public Dog
+							CEO API, then steps through that breed’s photographs one at a time.
+						</p>
+						<ul class='link-row'>
+							<li><a class='link-primary' href='dog-breeds/'>Open</a></li>
+							<li>
+								<a href='https://zealous-coast-04e17a610.3.azurestaticapps.net'>Live site</a>
+							</li>
+							<li>
+								<a href='https://github.com/aebodi/lions_tigers_and_bears_oh_my-'>Source</a>
+							</li>
+						</ul>
+					</li>
+
+					<li class='card'>
+						<p class='sprint-label'>Sprint 2</p>
+						<h3>Web Resume</h3>
+						<p class='card-body'>
+							An on-screen resume that prints cleanly to US Letter and links to a
+							downloadable PDF copy of the same document.
+						</p>
+						<ul class='link-row'>
+							<li><a class='link-primary' href='web-resume/'>Open</a></li>
+							<li>
+								<a href='https://jolly-flower-0d801ea10.4.azurestaticapps.net'>Live site</a>
+							</li>
+							<li><a href='https://github.com/aebodi/web_resume'>Source</a></li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+
+			<section aria-labelledby='upcoming-heading'>
+				<h2 id='upcoming-heading'>Coming soon</h2>
+				<p class='section-note'>
+					Slots reserved for the remaining web-based assignments. Each becomes a full card
+					once the assignment is built and deployed.
+				</p>
+
+				<ul class='card-grid'>
+					<li class='card card-upcoming' aria-disabled='true'>
+						<p class='sprint-label'>Sprint 3</p>
+						<h3>Assignment to be announced</h3>
+						<p class='card-body'>Not started yet.</p>
+					</li>
+
+					<li class='card card-upcoming' aria-disabled='true'>
+						<p class='sprint-label'>Sprint 4</p>
+						<h3>Assignment to be announced</h3>
+						<p class='card-body'>Not started yet.</p>
+					</li>
+
+					<li class='card card-upcoming' aria-disabled='true'>
+						<p class='sprint-label'>Final project</p>
+						<h3>Assignment to be announced</h3>
+						<p class='card-body'>Not started yet.</p>
+					</li>
+				</ul>
+			</section>
+		</main>
+
+		<footer class='page-footer'>
+			<p>
+				© 2026 Andres Bodington ·
+				<a href='https://github.com/aebodi/assignment-portfolio'>Portfolio source on GitHub</a>
+			</p>
+		</footer>
 	</body>
 </html>

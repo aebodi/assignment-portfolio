@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+	AI use: Claude (Opus 5) drafted this markup following the page structure taught in Brad
+	Schiff's tutorial "Dogs, JavaScript & An API"; reviewed and edited by hand.
+-->
+<html lang='en'>
+<head>
+	<meta charset='UTF-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<title>Dog Breed Slideshow</title>
+	<link rel='stylesheet' href='styles.css'>
+</head>
+<body>
+	<main class='app'>
+		<h1>Dog Breed Slideshow</h1>
+		<p class='intro'>Pick a breed, then step through its photos with Previous and Next.</p>
+
+		<div class='picker'>
+			<label for='breedSelect'>Breed</label>
+			<select id='breedSelect'>
+				<option value=''>Loading breeds…</option>
+			</select>
+		</div>
+
+		<div class='viewer' id='viewer'></div>
+
+		<p id='statusMessage' class='status'>Choose a breed to begin.</p>
+
+		<div class='controls'>
+			<button id='previousButton' type='button' disabled>Previous</button>
+			<button id='nextButton' type='button' disabled>Next</button>
+		</div>
+	</main>
+
+	<script src='script.js'></script>
+</body>
+</html>
